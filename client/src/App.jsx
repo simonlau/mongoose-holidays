@@ -1,7 +1,16 @@
+import { BrowserRouter, Link, Route, Routes } from "react-router-dom";
+import EditHolidaysPage from "./pages/EditHolidaysPage";
+import HolidaysPage from "./pages/HolidaysPage";
+
 function App() {
   return (
     <>
-      <h1>Holidays</h1>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/holidays" element={<HolidaysPage />} />
+          <Route path="/holidays/:id" element={<EditHolidaysPage />} />
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }
