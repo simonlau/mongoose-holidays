@@ -5,6 +5,10 @@
   "scripts": {
     "start": "cd server && npm run start"
   },
+  "workspaces": [
+    "client",
+    "server"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/simonlau/mongoose-holidays.git"
@@ -16,4 +20,5 @@
     "url": "https://github.com/simonlau/mongoose-holidays/issues"
   },
   "homepage": "https://github.com/simonlau/mongoose-holidays#readme"
+
 }
