@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "build": "cd client && npm run build",
     "start": "cd server && npm run start"
   },
   "workspaces": [
@@ -20,5 +21,4 @@
     "url": "https://github.com/simonlau/mongoose-holidays/issues"
   },
   "homepage": "https://github.com/simonlau/mongoose-holidays#readme"
-
 }
