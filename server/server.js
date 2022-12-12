@@ -17,6 +17,10 @@ app.get("/", (req, res) => {
   res.json({ msg: "Hello World!" });
 });
 
+app.get("*", (req, res) => {
+  res.sendFile("../client/dist/index.html");
+});
+
 mongoose.connection.once("open", () => {
   console.log("connected to mongoose...");
   app.listen(PORT, () => {
