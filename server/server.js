@@ -17,6 +17,9 @@ app.get("/", (req, res) => {
   res.json({ msg: "Hello World!" });
 });
 
-app.listen(PORT, () => {
-  console.log(`Example app listening on port ${PORT}`);
+mongoose.connection.once("open", () => {
+  console.log("connected to mongoose...");
+  app.listen(PORT, () => {
+    console.log(`Example app listening on port ${PORT}`);
+  });
 });
