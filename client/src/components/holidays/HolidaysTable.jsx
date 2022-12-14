@@ -8,7 +8,7 @@ function HolidaysTable() {
     fetch("/api/holidays/")
       .then((response) => response.json())
       .then((data) => setHolidays(data));
-  }, [refresh]);
+  }, []);
 
   const handleDelete = (id) => {
     fetch(`/api/holidays/${id}`, {
