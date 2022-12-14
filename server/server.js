@@ -15,6 +15,7 @@ mongoose.set("runValidators", true);
 mongoose.set("strictQuery", false);
 mongoose.connect(MONGO_URI);
 
+app.use(express.json());
 app.use(morgan("dev"));
 app.use(express.static("../client/dist"));
 
