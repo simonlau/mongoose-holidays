@@ -25,6 +25,29 @@ router.post("/", async (req, res) => {
   }
 });
 
+router.get("/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const holiday = await Holiday.findById(id);
+    res.json(holiday);
+  } catch (error) {
+    res.status(500).json({ error });
+  }
+});
+
+//? update => locate the item  => change it
+router.put("/:id", async (req, res) => {
+  const { id } = req.params;
+  try {
+    const holiday = await Holiday.findByIdAndUpdate(id, req.body, {
+      new: true,
+    });
+    res.json(holiday);
+  } catch (error) {
+    res.status(500).json({ error });
+  }
+});
+
 router.delete("/:id", async (req, res) => {
   const { id } = req.params;
   try {
